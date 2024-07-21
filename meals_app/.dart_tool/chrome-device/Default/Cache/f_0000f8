@@ -1,0 +1,322 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/flutter_complete_guide/models/meal.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/flutter/src/widgets/scroll_view.dart', 'packages/flutter_complete_guide/widgets/meal_item.dart'], (function load__packages__flutter_complete_guide__screens__category_meals_screen_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__flutter_complete_guide__models__meal$46dart, packages__flutter__src__material__icon_button$46dart, packages__flutter__src__widgets__scroll_view$46dart, packages__flutter_complete_guide__widgets__meal_item$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const routes = packages__flutter__src__widgets__widget_span$46dart.src__widgets__routes;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const meal = packages__flutter_complete_guide__models__meal$46dart.models__meal;
+  const scaffold = packages__flutter__src__material__icon_button$46dart.src__material__scaffold;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const scroll_view = packages__flutter__src__widgets__scroll_view$46dart.src__widgets__scroll_view;
+  const meal_item = packages__flutter_complete_guide__widgets__meal_item$46dart.widgets__meal_item;
+  var category_meals_screen = Object.create(dart.library);
+  var $_get = dartx._get;
+  var $contains = dartx.contains;
+  var $where = dartx.where;
+  var $toList = dartx.toList;
+  var $removeWhere = dartx.removeWhere;
+  var $length = dartx.length;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    ObjectL: () => (T.ObjectL = dart.constFn(dart.legacy(core.Object)))(),
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    MapOfStringL$StringL: () => (T.MapOfStringL$StringL = dart.constFn(core.Map$(T.StringL(), T.StringL())))(),
+    MapLOfStringL$StringL: () => (T.MapLOfStringL$StringL = dart.constFn(dart.legacy(T.MapOfStringL$StringL())))(),
+    boolL: () => (T.boolL = dart.constFn(dart.legacy(core.bool)))(),
+    MealL: () => (T.MealL = dart.constFn(dart.legacy(meal.Meal)))(),
+    MealLToboolL: () => (T.MealLToboolL = dart.constFn(dart.fnType(T.boolL(), [T.MealL()])))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    MealItemL: () => (T.MealItemL = dart.constFn(dart.legacy(meal_item.MealItem)))(),
+    BuildContextL: () => (T.BuildContextL = dart.constFn(dart.legacy(framework.BuildContext)))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    BuildContextLAndintLToMealItemL: () => (T.BuildContextLAndintLToMealItemL = dart.constFn(dart.fnType(T.MealItemL(), [T.BuildContextL(), T.intL()])))()
+  };
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 21,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 47,
+        [_Location_file]: "file:///C:/Users/Amey%20Shiwal/Development/projects/meals_app/lib/screens/category_meals_screen.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 9,
+        [_Location_line]: 47,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5], T._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 15,
+        [_Location_line]: 46,
+        [_Location_file]: "file:///C:/Users/Amey%20Shiwal/Development/projects/meals_app/lib/screens/category_meals_screen.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "id",
+        [_Location_column]: 13,
+        [_Location_line]: 52,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 13,
+        [_Location_line]: 53,
+        [_Location_file]: null
+      });
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "imageUrl",
+        [_Location_column]: 13,
+        [_Location_line]: 54,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "duration",
+        [_Location_column]: 13,
+        [_Location_line]: 55,
+        [_Location_file]: null
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "affordability",
+        [_Location_column]: 13,
+        [_Location_line]: 56,
+        [_Location_file]: null
+      });
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "complexity",
+        [_Location_column]: 13,
+        [_Location_line]: 57,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8, C[9] || CT.C9, C[10] || CT.C10, C[11] || CT.C11, C[12] || CT.C12, C[13] || CT.C13], T._LocationL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 18,
+        [_Location_line]: 51,
+        [_Location_file]: "file:///C:/Users/Amey%20Shiwal/Development/projects/meals_app/lib/screens/category_meals_screen.dart"
+      });
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemBuilder",
+        [_Location_column]: 9,
+        [_Location_line]: 50,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "itemCount",
+        [_Location_column]: 9,
+        [_Location_line]: 60,
+        [_Location_file]: null
+      });
+    },
+    get C15() {
+      return C[15] = dart.constList([C[16] || CT.C16, C[17] || CT.C17], T._LocationL());
+    },
+    get C14() {
+      return C[14] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[15] || CT.C15,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 49,
+        [_Location_file]: "file:///C:/Users/Amey%20Shiwal/Development/projects/meals_app/lib/screens/category_meals_screen.dart"
+      });
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "appBar",
+        [_Location_column]: 7,
+        [_Location_line]: 46,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "body",
+        [_Location_column]: 7,
+        [_Location_line]: 49,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.constList([C[20] || CT.C20, C[21] || CT.C21], T._LocationL());
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[19] || CT.C19,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 45,
+        [_Location_file]: "file:///C:/Users/Amey%20Shiwal/Development/projects/meals_app/lib/screens/category_meals_screen.dart"
+      });
+    }
+  }, false);
+  var C = Array(22).fill(void 0);
+  var I = ["package:flutter_complete_guide/screens/category_meals_screen.dart"];
+  var availableMeals$ = dart.privateName(category_meals_screen, "CategoryMealsScreen.availableMeals");
+  category_meals_screen.CategoryMealsScreen = class CategoryMealsScreen extends framework.StatefulWidget {
+    get availableMeals() {
+      return this[availableMeals$];
+    }
+    set availableMeals(value) {
+      super.availableMeals = value;
+    }
+    createState() {
+      return new category_meals_screen._CategoryMealsScreenState.new();
+    }
+  };
+  (category_meals_screen.CategoryMealsScreen.new = function(availableMeals, opts) {
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[availableMeals$] = availableMeals;
+    category_meals_screen.CategoryMealsScreen.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = category_meals_screen.CategoryMealsScreen.prototype;
+  dart.addTypeTests(category_meals_screen.CategoryMealsScreen);
+  dart.addTypeCaches(category_meals_screen.CategoryMealsScreen);
+  dart.setMethodSignature(category_meals_screen.CategoryMealsScreen, () => ({
+    __proto__: dart.getMethods(category_meals_screen.CategoryMealsScreen.__proto__),
+    createState: dart.fnType(dart.legacy(category_meals_screen._CategoryMealsScreenState), [])
+  }));
+  dart.setLibraryUri(category_meals_screen.CategoryMealsScreen, I[0]);
+  dart.setFieldSignature(category_meals_screen.CategoryMealsScreen, () => ({
+    __proto__: dart.getFields(category_meals_screen.CategoryMealsScreen.__proto__),
+    availableMeals: dart.finalFieldType(dart.legacy(core.List$(dart.legacy(meal.Meal))))
+  }));
+  dart.defineLazy(category_meals_screen.CategoryMealsScreen, {
+    /*category_meals_screen.CategoryMealsScreen.routeName*/get routeName() {
+      return "/category-meals";
+    }
+  }, true);
+  var _loadedInitData = dart.privateName(category_meals_screen, "_loadedInitData");
+  var _removeMeal = dart.privateName(category_meals_screen, "_removeMeal");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  category_meals_screen._CategoryMealsScreenState = class _CategoryMealsScreenState extends framework.State$(dart.legacy(category_meals_screen.CategoryMealsScreen)) {
+    didChangeDependencies() {
+      if (!dart.test(this[_loadedInitData])) {
+        let routeArgs = T.MapLOfStringL$StringL().as(routes.ModalRoute.of(T.ObjectL(), this.context).settings.arguments);
+        this.categoryTitle = routeArgs[$_get]("title");
+        let categoryId = routeArgs[$_get]("id");
+        this.displayedMeals = this.widget.availableMeals[$where](dart.fn(meal => meal.categories[$contains](categoryId), T.MealLToboolL()))[$toList]();
+        this[_loadedInitData] = true;
+      }
+      super.didChangeDependencies();
+    }
+    [_removeMeal](mealId) {
+      this.setState(dart.fn(() => {
+        this.displayedMeals[$removeWhere](dart.fn(meal => meal.id == mealId, T.MealLToboolL()));
+      }, T.VoidToNull()));
+    }
+    build(context) {
+      return new scaffold.Scaffold.new({appBar: new app_bar.AppBar.new({title: new text.Text.new(this.categoryTitle, {$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), body: new scroll_view.ListView.builder({itemBuilder: dart.fn((ctx, index) => new meal_item.MealItem.new({id: this.displayedMeals[$_get](index).id, title: this.displayedMeals[$_get](index).title, imageUrl: this.displayedMeals[$_get](index).imageUrl, duration: this.displayedMeals[$_get](index).duration, affordability: this.displayedMeals[$_get](index).affordability, complexity: this.displayedMeals[$_get](index).complexity, $creationLocationd_0dea112b090073317d4: C[6] || CT.C6}), T.BuildContextLAndintLToMealItemL()), itemCount: this.displayedMeals[$length], $creationLocationd_0dea112b090073317d4: C[14] || CT.C14}), $creationLocationd_0dea112b090073317d4: C[18] || CT.C18});
+    }
+  };
+  (category_meals_screen._CategoryMealsScreenState.new = function() {
+    this.categoryTitle = null;
+    this.displayedMeals = null;
+    this[_loadedInitData] = false;
+    category_meals_screen._CategoryMealsScreenState.__proto__.new.call(this);
+    ;
+  }).prototype = category_meals_screen._CategoryMealsScreenState.prototype;
+  dart.addTypeTests(category_meals_screen._CategoryMealsScreenState);
+  dart.addTypeCaches(category_meals_screen._CategoryMealsScreenState);
+  dart.setMethodSignature(category_meals_screen._CategoryMealsScreenState, () => ({
+    __proto__: dart.getMethods(category_meals_screen._CategoryMealsScreenState.__proto__),
+    [_removeMeal]: dart.fnType(dart.void, [dart.legacy(core.String)]),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(category_meals_screen._CategoryMealsScreenState, I[0]);
+  dart.setFieldSignature(category_meals_screen._CategoryMealsScreenState, () => ({
+    __proto__: dart.getFields(category_meals_screen._CategoryMealsScreenState.__proto__),
+    categoryTitle: dart.fieldType(dart.legacy(core.String)),
+    displayedMeals: dart.fieldType(dart.legacy(core.List$(dart.legacy(meal.Meal)))),
+    [_loadedInitData]: dart.fieldType(dart.legacy(core.bool))
+  }));
+  dart.trackLibraries("packages/flutter_complete_guide/screens/category_meals_screen.dart", {
+    "package:flutter_complete_guide/screens/category_meals_screen.dart": category_meals_screen
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["category_meals_screen.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAQmB;;;;;;;AAK0B;IAA2B;;4DAH7C;;;AAAzB;;EAAwC;;;;;;;;;;;;;MAJ3B,mDAAS;;;;;;;;;;;;;AAiBpB,qBAAK;AACG,wBACwC,6BAA/B,AAAY,AAAS,kCAAlB;AACgB,QAAlC,qBAAgB,AAAS,SAAA,QAAC;AACpB,yBAAa,AAAS,SAAA,QAAC;AAGlB,QAFX,sBAAiB,AAAO,AAAe,AAEpC,mCAF0C,QAAC,QACrC,AAAK,AAAW,IAAZ,uBAAqB,UAAU;AAEtB,QAAtB,wBAAkB;;AAES,MAAvB;IACR;kBAEwB;AAGpB,MAFF,cAAS;AACgD,QAAvD,AAAe,kCAAY,QAAC,QAAS,AAAK,AAAG,IAAJ,OAAO,MAAM;;IAE1D;UAG0B;AACxB,YAAO,oCACG,+BACC,kBAAK,6IAEC,+CACA,SAAC,KAAK,UACV,gCACD,AAAc,AAAQ,2BAAP,KAAK,aACjB,AAAc,AAAQ,2BAAP,KAAK,mBACjB,AAAc,AAAQ,2BAAP,KAAK,sBACpB,AAAc,AAAQ,2BAAP,KAAK,2BACf,AAAc,AAAQ,2BAAP,KAAK,6BACvB,AAAc,AAAQ,2BAAP,KAAK,wHAGzB,AAAe;IAGhC;;;IA7CO;IACI;IACP,wBAAkB;;;EA4CxB","file":"../../../../../../../packages/flutter_complete_guide/screens/category_meals_screen.dart.lib.js"}');
+  // Exports:
+  return {
+    screens__category_meals_screen: category_meals_screen
+  };
+}));
+
+//# sourceMappingURL=category_meals_screen.dart.lib.js.map
